@@ -10,11 +10,11 @@ cookbook "mod_php5_apache2", git: "https://github.com/stepking/opsworks-php55-ap
 cookbook "agent_version", git: "https://github.com/aws/opsworks-cookbooks.git", rel:"agent_version", branch: "release-chef-11.10"
 
 #cookbook "apache2", git: "https://github.com/aws/opsworks-cookbooks.git", rel:"apache2", branch: "release-chef-11.10"
-#### testing custom dependencies to see if berkshelf can run without the loop
+#### testing custom dependencies/deploy to see if berkshelf can run without the loop
 cookbook "dependencies", git: "https://github.com/stepking/opsworks-cookbooks.git", rel:"dependencies", branch: "release-chef-11.10"
+cookbook "deploy", git: "https://github.com/stepking/opsworks-cookbooks.git", rel:"deploy", branch: "release-chef-11.10"
 ###
 
-cookbook "deploy", git: "https://github.com/aws/opsworks-cookbooks.git", rel:"deploy", branch: "release-chef-11.10"
 cookbook "ebs", git: "https://github.com/aws/opsworks-cookbooks.git", rel:"ebs", branch: "release-chef-11.10"
 cookbook "gem_support", git: "https://github.com/aws/opsworks-cookbooks.git", rel:"gem_support", branch: "release-chef-11.10"
 cookbook "haproxy", git: "https://github.com/aws/opsworks-cookbooks.git", rel:"haproxy", branch: "release-chef-11.10"
