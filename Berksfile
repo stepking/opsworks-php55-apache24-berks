@@ -9,11 +9,13 @@ opsworks_cb_path = '/opt/aws/opsworks/current/cookbooks'
 opsworks_cookbooks = Dir[opsworks_cb_path + '/*'].select { |f| File.directory?(f) }.map { |f| File.basename(f) }
 
 # Don't install these cookbooks with berkshelf
-opwsorks_exclude = ['deploy','apache2','mod_php5_apache2','dependencies']
+opsworks_exclude = ['deploy','apache2','mod_php5_apache2','dependencies']
 
 # Get all of the opworks cookbooks
 opsworks_cookbooks.each do |cb|
-cookbook(cb, path: File.join(opsworks_cb_path, cb))
+  unless opsworks_exclude.include? cb 
+    cookbook(cb, path: File.join(opsworks_cb_path, cb))
+  end
 end
 
 #overidden cookbooks
