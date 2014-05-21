@@ -8,34 +8,29 @@ TODO: List your supported platforms.
 
 ## Attributes
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['opsworks-php55-apache24']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+
 
 ## Usage
 
 ### opsworks-php55-apache24::default
 
-Include `opsworks-php55-apache24` in your node's `run_list`:
+Create a custom layer using this cookbook.
+Edit the "recipes" section in the layer to add the following custom recipes.
 
-```json
-{
-  "run_list": [
-    "recipe[opsworks-php55-apache24::default]"
-  ]
-}
-```
+####Setup
+`opsworks-php55-apache24-berks::setup`
+
+####Configure
+`opsworks-php55-apache24-berks::config`
+
+####Deploy
+`opsworks-php55-apache24-berks::deploy`
+
+####Undeploy
+`opsworks-php55-apache24-berks::undeploy`
+
+####Shutdown
+`opsworks-php55-apache24-berks::shutdown`
 
 ## Contributing
 
