@@ -2,7 +2,6 @@
 #
 #
 source "https://api.berkshelf.com"
-metadata
 
 # Include Local Opsworks Cookbooks
 opsworks_cb_path = '/opt/aws/opsworks/current/cookbooks'
